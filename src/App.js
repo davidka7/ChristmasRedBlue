@@ -19,7 +19,20 @@ function App() {
       setRedSave(redSave + 1);
     } else if (teamTurn == "blueTeam" && formState == christmas[algo].answer) {
       setBlueSave(blueSave + 1);
+    } else if (teamTurn == "redTeam" && formState == christmas[algo].answer1) {
+      setRedSave(redSave + 1);
+    } else if (teamTurn == "blueTeam" && formState == christmas[algo].answer1) {
+      setBlueSave(blueSave + 1);
+    } else if (teamTurn == "redTeam" && formState == christmas[algo].answer2) {
+      setRedSave(redSave + 1);
+    } else if (teamTurn == "blueTeam" && formState == christmas[algo].answer2) {
+      setBlueSave(blueSave + 1);
+    } else if (teamTurn == "redTeam" && formState == christmas[algo].answer3) {
+      setRedSave(redSave + 1);
+    } else if (teamTurn == "blueTeam" && formState == christmas[algo].answer3) {
+      setBlueSave(blueSave + 1);
     }
+
     setAlgo(algo + 1);
     teamTurn == "redTeam" ? setTeamTurn("blueTeam") : setTeamTurn("redTeam");
     setFormState("");

@@ -2,69 +2,105 @@
     {
       "id": 0,
       "question": "Santa saw someone reading the _____ translation, and then put him on the naughty list.",
-      "answer": "passion"
+      "answer": "passion",
+      "answer1": "Passion",
+      "answer2": "",
+      "answer3": ""
      
     },
     {
       "id": 1,
       "question": "What is Mrs.Claus real name?",
-      "answer": "albina"
+      "answer": "albina",
+      "answer1": "Albina",
+      "answer2": "",
+      "answer3": ""
     },
     {
       "id": 2,
       "question": "How much kids does santa have???",
-      "answer": "two"
+      "answer": "two",
+      "answer1": "2",
+      "answer2": "Two",
+      "answer3": ""
 
     },
     {
         "id": 3,
         "question": "Whats Santas favorite food?",
-        "answer": "cookie"
+        "answer": "cookie",
+        "answer1": "Cookie",
+        "answer2": "Bible",
+        "answer3": "bible"
        
       },
       {
         "id": 4,
         "question": "What is Santas foot Size?",
-        "answer": "11"
+        "answer": "11",
+        "answer1": "Eleven",
+        "answer2": "eleven",
+        "answer3": ""
       },
       {
         "id": 5,
         "question": "How much reindeers does Santa Have?",
-        "answer": "twelve"
+        "answer": "ten",
+        "answer1": "Ten",
+        "answer2": "10",
+        "answer3": ""
   
       },
       {
         "id": 6,
         "question": "What is Santas favorite drink?",
-        "answer": "milk"
+        "answer": "milk",
+        "answer1": "Milk",
+        "answer2": "pepsi",
+        "answer3": "Pepsi"
        
       },
       {
         "id": 7,
         "question": "How old was Santa before stopped aging?",
-        "answer": "thirthy one"
+        "answer": "thirthy one",
+        "answer1": "Thirty one",
+        "answer2": "31",
+        "answer3": ""
       },
       {
         "id": 8,
         "question": "How much kids does Santa want",
-        "answer": "4"
+        "answer": "4",
+        "answer1": "four",
+        "answer2": "Four",
+        "answer3": ""
   
       },
       {
         "id": 9,
         "question": "Does Santa consider i68 worthy of his presents?",
-        "answer": "maybe"
+        "answer": "maybe",
+        "answer1": "no",
+        "answer2": "No",
+        "answer3": "Maybe"
        
       },
       {
         "id": 10,
-        "question": "There is a Elf that leads santas Choir,who is it?",
-        "answer": "noah"
+        "question": "There is an Elf that leads santas Choir,who is it?",
+        "answer": "noah",
+        "answer1": "Noah",
+        "answer2": "",
+        "answer3": ""
       },
       {
         "id": 11,
-        "question": "There is a Elf that leads santas Choir,who is it?",
-        "answer": "noah"
+        "question": "this is the end",
+        "answer": "",
+        "answer1": "",
+        "answer2": "",
+        "answer3": ""
       }
 
 
