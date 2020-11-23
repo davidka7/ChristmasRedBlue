@@ -84,8 +84,8 @@ function App() {
           ) : (
             <div className="presents">
               Thanks for Playing, {redSave > blueSave ? "Red Team" : ""}{" "}
-              {redSave < blueSave ? "Red Team" : "Blue Team"}{" "}
-              {redSave == blueSave ? "Both Win" : ""} Wins!!
+              {redSave < blueSave ? "Red Team" : ""}{" "}
+              {redSave == blueSave ? "Both" : ""} Wins!!
             </div>
           )}
         </div>
