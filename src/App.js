@@ -5,9 +5,9 @@ import red from "./red.png";
 import blue from "./blue.png";
 import christmas from "./christmas.json";
 function App() {
-  const [blueSave, setBlueSave] = useState("0");
+  const [blueSave, setBlueSave] = useState(0);
   const [formState, setFormState] = useState("");
-  const [redSave, setRedSave] = useState("0");
+  const [redSave, setRedSave] = useState(0);
   const [teamTurn, setTeamTurn] = useState("redTeam");
   const [trueorfalse, settrueorfalse] = useState(true);
   const [algo, setAlgo] = useState(0);
@@ -49,7 +49,15 @@ function App() {
           {" "}
           {algo !== 11 ? (
             <div>
-              <div className={teamTurn}>{christmas[algo].question}</div>{" "}
+              <div className={teamTurn}>
+                {" "}
+                {algo !== 0 ? (
+                  <div>Previous Answer:{christmas[algo].answer}. </div>
+                ) : (
+                  ""
+                )}
+                {christmas[algo].question}
+              </div>{" "}
               <div>
                 {" "}
                 <textarea
@@ -74,9 +82,10 @@ function App() {
               </div>
             </div>
           ) : (
-            <div>
-              Thanks for Playing,{" "}
-              {redSave > blueSave ? "Red Team" : "Blue Team"} Wins!!
+            <div className="presents">
+              Thanks for Playing, {redSave > blueSave ? "Red Team" : ""}{" "}
+              {redSave < blueSave ? "Red Team" : "Blue Team"}{" "}
+              {redSave == blueSave ? "Both Win" : ""} Wins!!
             </div>
           )}
         </div>
