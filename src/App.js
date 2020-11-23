@@ -32,6 +32,7 @@ function App() {
     <div>
       {trueorfalse ? (
         <div onClick={handleChange} className="presents">
+          <br />
           Hello Meet Santa, this year Santa ate to much cookies <br />
           and was put on a timeout. So he coudn't prepare to much <br />
           presents for you. So you in groups of two will compete <br />
@@ -49,6 +50,8 @@ function App() {
           {" "}
           {algo !== 11 ? (
             <div>
+              <br />
+              <br />
               <div className={teamTurn}>
                 {" "}
                 {algo !== 0 ? (
@@ -83,9 +86,11 @@ function App() {
             </div>
           ) : (
             <div className="presents">
+              <br />
+              <br />
               Thanks for Playing, {redSave > blueSave ? "Red Team" : ""}{" "}
               {redSave < blueSave ? "Red Team" : ""}{" "}
-              {redSave == blueSave ? "Both" : ""} Wins!!
+              {redSave == blueSave ? "Both Teams" : ""} Wins!!
             </div>
           )}
         </div>
