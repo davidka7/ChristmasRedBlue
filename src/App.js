@@ -15,14 +15,14 @@ function App() {
     settrueorfalse(false);
   };
   const handleAlgo = () => {
-    teamTurn == "redTeam" && e.target.value == christmas[algo].answer
-      ? setRedSave(redSave + 1)
-      : "";
-    teamTurn == "blueTeam" && e.target.value == christmas[algo].answer
-      ? setRedSave(redSave + 1)
-      : "";
+    if (teamTurn == "redTeam" && formState == christmas[algo].answer) {
+      setRedSave(redSave + 1);
+    } else if (teamTurn == "blueTeam" && formState == christmas[algo].answer) {
+      setBlueSave(blueSave + 1);
+    }
     setAlgo(algo + 1);
     teamTurn == "redTeam" ? setTeamTurn("blueTeam") : setTeamTurn("redTeam");
+    setFormState("");
   };
   const handleAnswer = (e) => {
     setFormState(e.target.value);
@@ -46,32 +46,41 @@ function App() {
         </div>
       ) : (
         <div>
-          <div className={teamTurn}>{christmas[algo].question}</div>{" "}
-          <div>
-            {" "}
-            <textarea
-              className="quest-continue"
-              placeHolder="Wright Here"
-              value={formState}
-              onChange={handleAnswer}
-            ></textarea>{" "}
-            <button Onclick={handleAlgo} className="quest-continue">
-              Check?
-            </button>
-          </div>
-          <div className="displayer">
-            <div></div>
-            <div className="blue-box">
-              <img src={blue} />
-              <div className="blue-answer">{blueSave}</div>{" "}
+          {" "}
+          {algo !== 11 ? (
+            <div>
+              <div className={teamTurn}>{christmas[algo].question}</div>{" "}
+              <div>
+                {" "}
+                <textarea
+                  className="quest-continue"
+                  placeHolder="Wright Here"
+                  value={formState}
+                  onChange={handleAnswer}
+                ></textarea>{" "}
+                <button onClick={handleAlgo} className="quest-continue">
+                  Check?
+                </button>
+              </div>
+              <div className="displayer">
+                <div className="blue-box">
+                  <img src={blue} />
+                  <div className="blue-answer">{blueSave}</div>{" "}
+                </div>
+                <div className="red-box">
+                  <img src={red} />
+                  <div className="red-answer">{redSave}</div>
+                </div>
+              </div>
             </div>
-            <div className="red-box">
-              <img src={red} />
-              <div className="red-answer">{redSave}</div>
+          ) : (
+            <div>
+              Thanks for Playing,{" "}
+              {redSave > blueSave ? "Red Team" : "Blue Team"} Wins!!
             </div>
-          </div>
+          )}
         </div>
-      )}
+      )}{" "}
     </div>
   );
 }

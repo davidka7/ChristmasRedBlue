@@ -15,6 +15,63 @@
       "question": "How much kids does santa have???",
       "answer": "two"
 
-    }
+    },
+    {
+        "id": 3,
+        "question": "Whats Santas favorite food?",
+        "answer": "cookie"
+       
+      },
+      {
+        "id": 4,
+        "question": "What is Santas foot Size?",
+        "answer": "11"
+      },
+      {
+        "id": 5,
+        "question": "How much reindeers does Santa Have?",
+        "answer": "twelve"
+  
+      },
+      {
+        "id": 6,
+        "question": "What is Santas favorite drink?",
+        "answer": "milk"
+       
+      },
+      {
+        "id": 7,
+        "question": "How old was Santa before stopped aging?",
+        "answer": "thirthy one"
+      },
+      {
+        "id": 8,
+        "question": "How much kids does Santa want",
+        "answer": "4"
+  
+      },
+      {
+        "id": 9,
+        "question": "Does Sanat consider i68 worthy of his presents?",
+        "answer": "maybe"
+       
+      },
+      {
+        "id": 10,
+        "question": "There is a Elf that leads santas Choir,who is it?",
+        "answer": "noah"
+      },
+      {
+        "id": 11,
+        "question": "There is a Elf that leads santas Choir,who is it?",
+        "answer": "noah"
+      }
+
+
+
+
+
+
+
   ]
   
