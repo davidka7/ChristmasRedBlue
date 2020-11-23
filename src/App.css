@@ -30,14 +30,14 @@ font-size:7vw
   color: white;
   font-size:7vw
 }
-.red-answer{
+.red-answer-blueTeam{
   position: absolute;
   top: 140%;
   left: 55%;
   transform: translate(-50%, -50%);
 
 }
-.blue-answer{
+.blue-answer-redTeam{
   position: absolute;
   top: 140%;
   left: 55%;
@@ -68,7 +68,19 @@ text-align:center;
 .quest-continue
 {
   
-  background-color: #0f9613; /* Green */
+  background-color: transparent; /* Green */
+  border: none;
+  color: white;
+  font-size:2vw;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+
+}
+.quest-continue1
+{
+  
+  background-color: blue; /* Green */
   border: none;
   color: white;
   font-size:2vw;
@@ -152,3 +164,42 @@ text-align:center;
                      4px 4px #05089e, 
                      5px 5px #05089e, 
                      6px 6px  #05089e;}
+
+                    
+.blue-answer-blueTeam
+                     {color: #fff;
+                      position: absolute;
+                      top: 140%;
+                      left: 55%;
+                      transform: translate(-50%, -50%);
+                    
+                    -webkit-animation: glow 1s ease-in-out infinite alternate;
+                    -moz-animation: glow 1s ease-in-out infinite alternate;
+                    animation: glow 1s ease-in-out infinite alternate;}
+                    @keyframes glow {
+                      from {
+                        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+                      }
+                      to {
+                        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+                      }
+                    }
+                    .red-answer-redTeam
+                     {color: #fff;
+                      position: absolute;
+                      top: 140%;
+                      left: 55%;
+                      transform: translate(-50%, -50%);
+                    
+                    -webkit-animation: glow 1s ease-in-out infinite alternate;
+                    -moz-animation: glow 1s ease-in-out infinite alternate;
+                    animation: glow 1s ease-in-out infinite alternate;}
+                    @keyframes glow {
+                      from {
+                        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+                      }
+                      to {
+                        text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+                      }
+                    }
+                    

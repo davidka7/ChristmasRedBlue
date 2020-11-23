@@ -52,7 +52,7 @@ function App() {
             <div>
               <br />
               <br />
-              <div className={teamTurn}>
+              <div className="presents">
                 {" "}
                 {algo !== 0 ? (
                   <div>Previous Answer:{christmas[algo - 1].answer}. </div>
@@ -69,18 +69,20 @@ function App() {
                   value={formState}
                   onChange={handleAnswer}
                 ></textarea>{" "}
-                <button onClick={handleAlgo} className="quest-continue">
+                <button onClick={handleAlgo} className="quest-continue1">
                   Check?
                 </button>
               </div>
               <div className="displayer">
                 <div className="blue-box">
                   <img src={blue} />
-                  <div className="blue-answer">{blueSave}</div>{" "}
+                  <div className={`blue-answer-${teamTurn}`}>
+                    {blueSave}
+                  </div>{" "}
                 </div>
                 <div className="red-box">
                   <img src={red} />
-                  <div className="red-answer">{redSave}</div>
+                  <div className={`red-answer-${teamTurn}`}>{redSave}</div>
                 </div>
               </div>
             </div>
