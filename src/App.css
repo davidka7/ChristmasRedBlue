@@ -1,38 +1,154 @@
-.App {
+body {
+ background-image: url("background.png");
+
+
+ background-repeat: no-repeat;
+
+}
+.displayer{
+  grid-template-rows: 40% 60% !important;    
+  
+  display: grid ;
+}
+.red-box{
+  position: relative;
   text-align: center;
+  grid-row: 1 ;
+  display:block;
+width:51vw;
+color: white;
+font-size:7vw
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.blue-box{
+  width:51vw;
+  position: relative;
+  text-align: center;
+  display:block;
+  grid-row: 1 ;
   color: white;
+  font-size:7vw
 }
+.red-answer{
+  position: absolute;
+  top: 140%;
+  left: 55%;
+  transform: translate(-50%, -50%);
 
-.App-link {
-  color: #61dafb;
 }
+.blue-answer{
+  position: absolute;
+  top: 140%;
+  left: 55%;
+  transform: translate(-50%, -50%);
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
+.questions{
+text-align:center;
+
+  color: white; 
+  font: bold 5vw Helvetica, Arial, Sans-Serif;
+  text-shadow: 1px 1px #fe4902, 
+               2px 2px #fe4902, 
+               3px 3px #fe4902;
+
+}
+.questions:hover {
+  position: relative; 
+  top: -3px; 
+  left: -3px; 
+  text-shadow: 1px 1px #fe4902, 
+               2px 2px #fe4902, 
+               3px 3px #fe4902, 
+               4px 4px #fe4902, 
+               5px 5px #fe4902, 
+               6px 6px #fe4902;
+}
+.quest-continue
+{
+  
+  background-color: #0f9613; /* Green */
+  border: none;
+  color: white;
+  font-size:2vw;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+
+}
+.team-turn{
+  text-align:center;
+  color: white;
+  -webkit-text-stroke: 3px coral;
+
+  color: white; 
+  font: bold 3vw Helvetica, Arial, Sans-Serif;
+  color: white
+
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: pink;
+}
+.presents{
+  text-align:center;
+  
+    color: rgb(167, 167, 167); 
+    font: bold 3vw Helvetica, Arial, Sans-Serif;
+    text-shadow: 1px 1px #2e0d00, 
+                 2px 2px  #2e0d00, 
+                 3px 3px  #2e0d00;
+  
+  }
+  .presents:hover {
+    position: relative; 
+    top: -3px; 
+    left: -3px; 
+    text-shadow: 1px 1px  #2e0d00, 
+                 2px 2px  #2e0d00, 
+                 3px 3px  #2e0d00, 
+                 4px 4px #2e0d00, 
+                 5px 5px  #2e0d00, 
+                 6px 6px  #2e0d00;
+  }
+  .redTeam{
+    text-align:center;
+    
+      color: rgb(255, 255, 255); 
+      font: bold 3vw Helvetica, Arial, Sans-Serif;
+      text-shadow: 1px 1px #a30704, 
+                   2px 2px  #a30704, 
+                   3px 3px  #a30704;
+    
+    }
+    .redTeam:hover {
+      position: relative; 
+      top: -3px; 
+      left: -3px; 
+      text-shadow: 1px 1px  #a30704, 
+                   2px 2px  #a30704, 
+                   3px 3px  #a30704, 
+                   4px 4px #a30704, 
+                   5px 5px  #a30704, 
+                   6px 6px  #a30704;
+    }
+    .blueTeam{
+      text-align:center;
+      
+        color: rgb(255, 255, 255);
+        font: bold 3vw Helvetica, Arial, Sans-Serif;
+        text-shadow: 1px 1px #05089e, 
+                     2px 2px  #05089e, 
+                     3px 3px  #05089e;
+      
+      }
+      .blueTeam:hover {
+        position: relative; 
+        top: -3px; 
+        left: -3px; 
+        text-shadow: 1px 1px  #05089e, 
+                     2px 2px  #05089e, 
+                     3px 3px  #05089e, 
+                     4px 4px #05089e, 
+                     5px 5px #05089e, 
+                     6px 6px  #05089e;}
