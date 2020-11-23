@@ -52,7 +52,7 @@ function App() {
               <div className={teamTurn}>
                 {" "}
                 {algo !== 0 ? (
-                  <div>Previous Answer:{christmas[algo].answer}. </div>
+                  <div>Previous Answer:{christmas[algo - 1].answer}. </div>
                 ) : (
                   ""
                 )}
