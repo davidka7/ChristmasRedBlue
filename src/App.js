@@ -44,19 +44,12 @@ function App() {
   return (
     <div>
       {trueorfalse ? (
-        <div onClick={handleChange} className="presents">
-          <br />
-          Hello Meet Santa, this year Santa ate to much cookies <br />
-          and was put on a timeout. So he coudn't prepare to much <br />
-          presents for you. So you in groups of two will compete <br />
-          to see who knows santa better.! If you can guess more <br />
-          right then you win the presents, AND IF NOT you will be <br />
-          put on the naughty list next year!. Each team that guesses <br />
-          a right answer will get a point on their christmas box. <br />
-          Team with most points at end of questionere wins!!!! <br />
-          The color will define the teams turn. Click on this text to start.{" "}
-          <br />
-          HOHO
+        <div className="presents">
+          <button>Sound</button>
+          <div onClick={handleChange} className="presents">
+            <br />
+            Click here to Conitnue
+          </div>
         </div>
       ) : (
         <div>
@@ -68,7 +61,10 @@ function App() {
               <div className="presents">
                 {" "}
                 {algo !== 0 ? (
-                  <div>Previous Answer:{christmas[algo - 1].answer}. </div>
+                  <div>
+                    <div>{algo == 10 ? "Last Question" : ""}</div>Previous
+                    Answer:{christmas[algo - 1].answer}.{" "}
+                  </div>
                 ) : (
                   ""
                 )}

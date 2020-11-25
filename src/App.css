@@ -107,21 +107,21 @@ text-align:center;
   
     color: rgb(167, 167, 167); 
     font: bold 3vw Helvetica, Arial, Sans-Serif;
-    text-shadow: 1px 1px #2e0d00, 
-                 2px 2px  #2e0d00, 
-                 3px 3px  #2e0d00;
+    text-shadow: 1px 1px #000000, 
+                 2px 2px  #000000, 
+                 3px 3px  #000000;
   
   }
   .presents:hover {
     position: relative; 
     top: -3px; 
     left: -3px; 
-    text-shadow: 1px 1px  #2e0d00, 
-                 2px 2px  #2e0d00, 
-                 3px 3px  #2e0d00, 
-                 4px 4px #2e0d00, 
-                 5px 5px  #2e0d00, 
-                 6px 6px  #2e0d00;
+    text-shadow: 1px 1px  #000000, 
+                 2px 2px  #000000, 
+                 3px 3px  #000000, 
+                 4px 4px #000000, 
+                 5px 5px  #000000, 
+                 6px 6px  #000000;
   }
   .redTeam{
     text-align:center;
