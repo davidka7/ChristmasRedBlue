@@ -4,8 +4,14 @@ import React, { useState } from "react";
 import red from "./red.png";
 import blue from "./blue.png";
 import christmas from "./christmas.json";
+import useSound from "use-sound";
+// import boopSfx from '../../sounds/boop.mp3';
 function App() {
   const [blueSave, setBlueSave] = useState(0);
+  const [play, { stop, isPlaying }] = useSound("boopSfx");
+  const [play1, { stop1 }] = useSound("soundUrl", { volume: 0.5 });
+  const [isHovering, setIsHovering] = React.useState(false);
+
   const [formState, setFormState] = useState("");
   const [redSave, setRedSave] = useState(0);
   const [teamTurn, setTeamTurn] = useState("redTeam");
@@ -45,8 +51,32 @@ function App() {
     <div>
       {trueorfalse ? (
         <div className="presents">
-          <button>Sound</button>
-          <div onClick={handleChange} className="presents">
+          <br />
+          <button
+            active={isPlaying}
+            size={60}
+            className="presents"
+            iconColor="var(--color-background)"
+            idleBackgroundColor="var(--color-text)"
+            activeBackgroundColor="var(--color-primary)"
+            play={play}
+            stop={stop}
+          >
+            Click Here to listen to Santa
+          </button>
+          <div
+            onClick={handleChange}
+            onMouseEnter={() => {
+              setIsHovering(true);
+              play1();
+            }}
+            onMouseLeave={() => {
+              setIsHovering(false);
+              stop1();
+            }}
+          >
+            {" "}
+            className="presents">
             <br />
             Click here to Conitnue
           </div>
@@ -74,12 +104,23 @@ function App() {
                 {" "}
                 <textarea
                   className="quest-continue"
-                  placeHolder="Wright Here"
+                  placeHolder="Click on this text to wright"
                   value={formState}
                   onChange={handleAnswer}
                 ></textarea>{" "}
-                <button onClick={handleAlgo} className="quest-continue1">
-                  Check?
+                <button
+                  onMouseEnter={() => {
+                    setIsHovering(true);
+                    play1();
+                  }}
+                  onMouseLeave={() => {
+                    setIsHovering(false);
+                    stop1();
+                  }}
+                >
+                  {" "}
+                  onClick={handleAlgo} className="quest-continue1"> Ready to
+                  Submit Answer, Click Here
                 </button>
               </div>
               <div className="displayer">

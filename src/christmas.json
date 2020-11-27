@@ -4,8 +4,8 @@
       "question": "Santa saw someone reading the _____ translation, and then put him on the naughty list.",
       "answer": "passion",
       "answer1": "Passion",
-      "answer2": "",
-      "answer3": ""
+      "answer2": "mormon",
+      "answer3": "Mormon"
      
     },
     {
@@ -13,8 +13,8 @@
       "question": "What is Mrs.Claus real name?",
       "answer": "albina",
       "answer1": "Albina",
-      "answer2": "",
-      "answer3": ""
+      "answer2": "Wife",
+      "answer3": "wife"
     },
     {
       "id": 2,
@@ -22,7 +22,7 @@
       "answer": "two",
       "answer1": "2",
       "answer2": "Two",
-      "answer3": ""
+      "answer3": "2"
 
     },
     {
@@ -40,7 +40,7 @@
         "answer": "11",
         "answer1": "Eleven",
         "answer2": "eleven",
-        "answer3": ""
+        "answer3": "11"
       },
       {
         "id": 5,
@@ -48,7 +48,7 @@
         "answer": "ten",
         "answer1": "Ten",
         "answer2": "10",
-        "answer3": ""
+        "answer3": "10"
   
       },
       {
@@ -62,11 +62,11 @@
       },
       {
         "id": 7,
-        "question": "How old was Santa before stopped aging?",
-        "answer": "thirthy one",
-        "answer1": "Thirty one",
-        "answer2": "31",
-        "answer3": ""
+        "question": "How old was Santa before he stopped aging?",
+        "answer": "thirthy three",
+        "answer1": "Thirty three",
+        "answer2": "33",
+        "answer3": "ThirtyThree"
       },
       {
         "id": 8,
@@ -74,7 +74,7 @@
         "answer": "4",
         "answer1": "four",
         "answer2": "Four",
-        "answer3": ""
+        "answer3": "4"
   
       },
       {
@@ -88,11 +88,11 @@
       },
       {
         "id": 10,
-        "question": "There is an Elf that leads santas Choir,who is it?",
-        "answer": "noah",
-        "answer1": "Noah",
-        "answer2": "",
-        "answer3": ""
+        "question": "There are Elfs that sing in santas Choir, can you guess one of them?",
+        "answer": "tanya",
+        "answer1": "Anzhelika",
+        "answer2": "Tanya",
+        "answer3": "anzhelika"
       },
       {
         "id": 11,
