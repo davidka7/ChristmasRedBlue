@@ -1,0 +1,74 @@
+
+   .first-Click{
+/* color: white; */
+text-align: center ;
+
+height:400px;
+color:white;
+font-size:4vw;
+/* text-shadow: 1px 1px #ffffff, 
+                   2px 2px #ffffff, 
+                   3px 3px #ffffff; */
+}
+.second-Click{
+    /* color: white; */
+    text-align: center ;
+    
+ 
+    color:black;
+    font-size:2.5vw;
+    /* text-shadow: 1px 1px #ffffff, 
+                       2px 2px #ffffff, 
+                       3px 3px #ffffff; */
+    }
+/* 
+    .first-Click:hover {
+      position: relative; 
+      top: -3px; 
+      left: -3px; 
+      text-shadow: 1px 1px #003268, 
+                   2px 2px #003268, 
+                   3px 3px #003268, 
+                   4px 4px #003268, 
+                   5px 5px #003268, 
+                   6px 6px #003268;
+    } */
+    .outlinerz{
+        font-family: Arial;
+  color: white;
+        font-weight: bold;
+      
+        border-image: url("donut.png");
+     
+        border-image-width: 150px;
+    
+    }
+    .outlinerz:hover {
+       
+        -webkit-animation: glow 1s ease-in-out infinite alternate;
+        -moz-animation: glow 1s ease-in-out infinite alternate;
+        animation: glow 1s ease-in-out infinite alternate;}
+        @keyframes glow {
+          from {
+            text-shadow: 0 0 100px #fff, 0 0 200px #fff, 0 0 300px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+          }
+          to {
+            text-shadow: 0 0 20px #fff, 0 0 30px #4d6eff, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+          }
+      }
+      .paddings{
+margin-left: 65px;
+margin-right:65px;
+display: flex;
+justify-content: space-around;
+
+      }
+ .maxer{
+width:25vw 
+
+ }
+ .special-corner{
+    border-radius: 5%;
+
+
+ }
