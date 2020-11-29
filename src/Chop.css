@@ -72,3 +72,48 @@ width:25vw
 
 
  }
+ .special-font{
+color:white;
+
+max-height:50px
+
+
+ } .special-font1{
+    color:white;
+    font-size:  3.5vw;
+ 
+    
+    
+     }
+.lifesecondary{
+   
+    line-height: 30px;
+    
+    padding: 40px;
+    box-shadow: 0 0 0 10px white;
+    outline: dashed 10px #727a80;
+}
+.lifedanger{
+   
+    line-height: 30px;
+    
+    padding: 40px;
+    box-shadow: 0 0 0 10px white;
+    outline: dashed 10px #960025; 
+}
+.lifesuccess{
+    
+    line-height: 30px;
+    
+    padding: 40px;
+    box-shadow: 0 0 0 10px white;
+    outline: dashed 10px #009688;
+}
+.lifeinfo{
+   
+    line-height: 30px;
+    
+    padding: 40px;
+    box-shadow: 0 0 0 10px white;
+    outline: dashed 10px #004196; 
+}

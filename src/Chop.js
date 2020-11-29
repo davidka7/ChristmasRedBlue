@@ -18,22 +18,60 @@ import data5 from "./5.json";
 
 function Chop() {
   const [trueOrFalse, setTrueOrFalse] = useState(false);
-  const [team1, setTeam1] = useState();
-  const [team2, setTeam2] = useState();
-  const [team3, setTeam3] = useState();
+  const [team1, setTeam1] = useState("");
+  const [team2, setTeam2] = useState("");
+  const [team3, setTeam3] = useState("");
   const [team1color, setTeam1color] = useState("light");
   const [team2color, setTeam2color] = useState("light");
   const [team3color, setTeam3color] = useState("light");
   const handleTrue = () => {
     setTrueOrFalse(true);
   };
-
+  const teams1 = (e) => {
+    setTeam1(e.target.value);
+  };
+  const teams2 = (e) => {
+    setTeam2(e.target.value);
+  };
+  const teams3 = (e) => {
+    setTeam3(e.target.value);
+  };
+  const teamcolors1 = (e) => {
+    setTeam1color(e.target.value);
+  };
+  const teamcolors2 = (e) => {
+    setTeam2color(e.target.value);
+  };
+  const teamcolors3 = (e) => {
+    setTeam3color(e.target.value);
+  };
   return (
     <div className="full-size">
       {trueOrFalse ? (
         <div>
           <div>
-            <CardDeck></CardDeck>
+            <br />
+            <CardDeck className="paddings">
+              {" "}
+              <Card bg={team1color} className={`life${team1color}`}>
+                <Card.Title className="second-Click "> Team {team1}</Card.Title>
+                <Card.Title className="second-Click"> Points: </Card.Title>
+              </Card>
+              <Card bg={team2color} classname={`life${team2color}`}>
+                <Card.Title className="second-Click">Team {team2}</Card.Title>
+                <Card.Title className="second-Click"> Points: </Card.Title>
+              </Card>
+              <Card bg={team3color} className={`life${team3color}`}>
+                <Card.Title className="second-Click">Team {team3}</Card.Title>
+                <Card.Title className="second-Click"> Points: </Card.Title>
+              </Card>
+            </CardDeck>
+            <CardDeck className="paddings">
+              {" "}
+              <Card bg="transparent" className="special-font">
+                <div className="special-font1"> Team Turn</div>
+              </Card>
+            </CardDeck>
             <br />
             <br />
             <CardDeck className="paddings">
@@ -76,14 +114,35 @@ function Chop() {
               <Card.Body className="paddings1">
                 <div>
                   <label className="second-Click">Teams Name:</label>
-                  <input className="maxer"></input>
+                  <input onChange={teams1} className="maxer"></input>
                 </div>
                 <div>
                   <label className="second-Click">
-                    Teams Color: <Button variant="secondary"> </Button>
-                    <Button variant="danger"> </Button>
-                    <Button> </Button>
-                    <Button> </Button>
+                    Teams Color:{" "}
+                    <Button
+                      onClick={teamcolors1}
+                      value="secondary"
+                      variant="secondary"
+                    >
+                      {" "}
+                    </Button>
+                    <Button
+                      value="danger"
+                      onClick={teamcolors1}
+                      variant="danger"
+                    >
+                      {" "}
+                    </Button>
+                    <Button
+                      value="success"
+                      onClick={teamcolors1}
+                      variant="success"
+                    >
+                      {" "}
+                    </Button>
+                    <Button value="info" onClick={teamcolors1} variant="info">
+                      {" "}
+                    </Button>
                   </label>
                 </div>
               </Card.Body>
@@ -93,14 +152,35 @@ function Chop() {
               <Card.Body className="paddings1">
                 <div>
                   <label className="second-Click">Teams Name:</label>
-                  <input className="maxer"></input>
+                  <input onChange={teams2} className="maxer"></input>
                 </div>
                 <div>
                   <label className="second-Click">
-                    Teams Color:<Button variant="secondary"> </Button>
-                    <Button variant="danger"> </Button>
-                    <Button> </Button>
-                    <Button> </Button>
+                    Teams Color:
+                    <Button
+                      value="secondary"
+                      onClick={teamcolors2}
+                      variant="secondary"
+                    >
+                      {" "}
+                    </Button>
+                    <Button
+                      value="danger"
+                      onClick={teamcolors2}
+                      variant="danger"
+                    >
+                      {" "}
+                    </Button>
+                    <Button
+                      value="success"
+                      onClick={teamcolors2}
+                      variant="success"
+                    >
+                      {" "}
+                    </Button>
+                    <Button value="info" onClick={teamcolors2} variant="info">
+                      {" "}
+                    </Button>
                   </label>
                 </div>
               </Card.Body>
@@ -110,14 +190,35 @@ function Chop() {
               <Card.Body className="paddings1">
                 <div>
                   <label className="second-Click">Teams Name:</label>
-                  <input className="maxer"></input>
+                  <input onChange={teams3} className="maxer"></input>
                 </div>
                 <div>
                   <label className="second-Click">
-                    Teams Color:<Button variant="secondary"> </Button>
-                    <Button variant="danger"> </Button>
-                    <Button> </Button>
-                    <Button> </Button>
+                    Teams Color:
+                    <Button
+                      onClick={teamcolors3}
+                      value="secondary"
+                      variant="secondary"
+                    >
+                      {" "}
+                    </Button>
+                    <Button
+                      value="danger"
+                      onClick={teamcolors3}
+                      variant="danger"
+                    >
+                      {" "}
+                    </Button>
+                    <Button
+                      value="success"
+                      onClick={teamcolors3}
+                      variant="success"
+                    >
+                      {" "}
+                    </Button>
+                    <Button value="info" onClick={teamcolors3} variant="info">
+                      {" "}
+                    </Button>
                   </label>
                 </div>
               </Card.Body>
