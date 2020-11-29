@@ -1,7 +1,11 @@
 .fonty{
 
 font-size: 1.8vw !important;
-color: rgb(255, 150, 150)
+color: rgb(255, 150, 150);
+
+display: flex;
+justify-content: space-around;
+
 }
 .outliners{
     justify-content: center;

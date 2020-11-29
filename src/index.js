@@ -4,12 +4,15 @@ import "./index.css";
 // import App from "./App";
 import Chop from "./Chop";
 import reportWebVitals from "./reportWebVitals";
+import { Provider } from "react-redux";
+import store from "./store";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Chop />
-
-    {/* <App /> */}
+    <Provider store={store}>
+      <Chop />
+    </Provider>
+    ,
   </React.StrictMode>,
   document.getElementById("root")
 );

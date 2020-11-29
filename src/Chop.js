@@ -3,6 +3,7 @@ import Modals from "./Modals";
 // import Container from "react-bootstrap/Container";
 // import Row from "react-bootstrap/Row";
 // import Col from "react-bootstrap/Col";
+import { connect } from "react-redux";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
@@ -16,16 +17,31 @@ import data3 from "./3.json";
 import data4 from "./4.json";
 import data5 from "./5.json";
 
-function Chop() {
+function Chop({ points }) {
   const [trueOrFalse, setTrueOrFalse] = useState(false);
   const [team1, setTeam1] = useState("");
+  const [TeamPlaying, setTeamPlaying] = useState("");
   const [team2, setTeam2] = useState("");
   const [team3, setTeam3] = useState("");
   const [team1color, setTeam1color] = useState("light");
   const [team2color, setTeam2color] = useState("light");
   const [team3color, setTeam3color] = useState("light");
+
+  const changeTeam = () => {
+    if (TeamPlaying == team1) {
+      setTeamPlaying(team2);
+    } else if (TeamPlaying == team2) {
+      setTeamPlaying(team3);
+    } else if (TeamPlaying == team3) {
+      setTeamPlaying(team1);
+    } else {
+      setTeamPlaying(team1);
+    }
+  };
+
   const handleTrue = () => {
     setTrueOrFalse(true);
+    changeTeam();
   };
   const teams1 = (e) => {
     setTeam1(e.target.value);
@@ -51,56 +67,109 @@ function Chop() {
         <div>
           <div>
             <br />
-            <CardDeck className="paddings">
+            <CardDeck className="paddings max-height">
               {" "}
               <Card bg={team1color} className={`life${team1color}`}>
                 <Card.Title className="second-Click "> Team {team1}</Card.Title>
-                <Card.Title className="second-Click"> Points: </Card.Title>
+                <Card.Title className="second-Click">
+                  {" "}
+                  Points: {points.reducers1}
+                </Card.Title>
               </Card>
-              <Card bg={team2color} classname={`life${team2color}`}>
+              <Card bg={team2color} className={`life${team2color}`}>
                 <Card.Title className="second-Click">Team {team2}</Card.Title>
-                <Card.Title className="second-Click"> Points: </Card.Title>
+                <Card.Title className="second-Click">
+                  {" "}
+                  Points: {points.reducers2}
+                </Card.Title>
               </Card>
               <Card bg={team3color} className={`life${team3color}`}>
                 <Card.Title className="second-Click">Team {team3}</Card.Title>
-                <Card.Title className="second-Click"> Points: </Card.Title>
+                <Card.Title className="second-Click">
+                  {" "}
+                  Points: {points.reducers3}
+                </Card.Title>
               </Card>
             </CardDeck>
             <CardDeck className="paddings">
               {" "}
               <Card bg="transparent" className="special-font">
-                <div className="special-font1"> Team Turn</div>
+                <div className="special-font1"> Team {TeamPlaying} Turn</div>
               </Card>
             </CardDeck>
-            <br />
-            <br />
+            <br /> <br />
             <CardDeck className="paddings">
               {data1.map((data) => {
-                return <Modals key data={data} />;
+                return (
+                  <Modals
+                    team1={team1}
+                    team2={team2}
+                    team3={team3}
+                    TeamPlaying={TeamPlaying}
+                    key
+                    data={data}
+                  />
+                );
               })}
             </CardDeck>
-            <br /> <br />
+            <br />
             <CardDeck className="paddings">
               {data2.map((data) => {
-                return <Modals key data={data} />;
+                return (
+                  <Modals
+                    team1={team1}
+                    team2={team2}
+                    team3={team3}
+                    TeamPlaying={TeamPlaying}
+                    key
+                    data={data}
+                  />
+                );
               })}
             </CardDeck>
-            <br /> <br />
+            <br />
             <CardDeck className="paddings">
               {data3.map((data) => {
-                return <Modals key data={data} />;
+                return (
+                  <Modals
+                    team1={team1}
+                    team2={team2}
+                    team3={team3}
+                    TeamPlaying={TeamPlaying}
+                    key
+                    data={data}
+                  />
+                );
               })}
             </CardDeck>
-            <br /> <br />
+            <br />
             <CardDeck className="paddings">
               {data4.map((data) => {
-                return <Modals key data={data} />;
+                return (
+                  <Modals
+                    team1={team1}
+                    team2={team2}
+                    team3={team3}
+                    TeamPlaying={TeamPlaying}
+                    key
+                    data={data}
+                  />
+                );
               })}
             </CardDeck>
-            <br /> <br />
+            <br />
             <CardDeck className="paddings">
               {data5.map((data) => {
-                return <Modals key data={data} />;
+                return (
+                  <Modals
+                    team1={team1}
+                    team2={team2}
+                    team3={team3}
+                    TeamPlaying={TeamPlaying}
+                    key
+                    data={data}
+                  />
+                );
               })}
             </CardDeck>
           </div>
@@ -236,5 +305,8 @@ function Chop() {
     </div>
   );
 }
+const mapStateToProps = (store) => {
+  return { points: store };
+};
 
-export default Chop;
+export default connect(mapStateToProps)(Chop);
