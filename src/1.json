@@ -2,16 +2,20 @@
     {
       "id": 0,
       "points": 100,
-      "question": "question",
-      "answer": "answer"
+      "question": "How much should you read your Bible?",
+      "answer": "right answer",
+      "background_image": 
+      "https://images.unsplash.com/photo-1504052434569-70ad5836ab65?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
     
      
     },
     {
         "id": 1,
         "points": 100,
-        "question": "question",
-        "answer": "answer"
+        "question": "Does Santa think i68 is worthy of his presents",
+        "answer": "right answer",
+        "background_image": 
+        "https://i.pinimg.com/originals/c2/e6/55/c2e655256db995ffac7d560921869be9.jpg"
       
        
       },
@@ -19,7 +23,9 @@
         "id": 2,
         "points": 100,
         "question": "question",
-        "answer": "answer"
+        "answer": "answer",
+        "background_image": 
+        ""
       
        
       },
@@ -27,7 +33,9 @@
         "id": 3,
         "points": 100,
         "question": "question",
-        "answer": "answer"
+        "answer": "answer",
+        "background_image": 
+        ""
       
        
       },
@@ -35,7 +43,9 @@
         "id": 4,
         "points": 100,
         "question": "question",
-        "answer": "answer"
+        "answer": "answer",
+        "background_image": 
+        ""
       
        
       },
@@ -43,7 +53,9 @@
         "id": 5,
         "points": 100,
         "question": "question",
-        "answer": "answer"
+        "answer": "answer",
+        "background_image": 
+        ""
       
        
       },
@@ -51,7 +63,9 @@
         "id": 6,
         "points": 100,
         "question": "question",
-        "answer": "answer"
+        "answer": "answer",
+        "background_image": 
+        ""
       
        
       },
@@ -59,7 +73,9 @@
         "id": 7,
         "points": 100,
         "question": "question",
-        "answer": "answer"
+        "answer": "answer",
+        "background_image": 
+        ""
       
        
       },
@@ -67,7 +83,9 @@
         "id": 8,
         "points": 100,
         "question": "question",
-        "answer": "answer"
+        "answer": "answer",
+        "background_image": 
+        ""
       
        
       }

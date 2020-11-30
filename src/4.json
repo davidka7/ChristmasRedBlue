@@ -3,7 +3,9 @@
     {
         "id":25,
         "points": 400, "question": "question",
-        "answer": "answer"
+        "answer": "answer",
+        "background_image": 
+        ""
         
         
             },
@@ -11,7 +13,9 @@
     {
         "id":26,
         "points": 400, "question": "question",
-        "answer": "answer"
+        "answer": "answer",
+        "background_image": 
+        ""
         
         
             },
@@ -19,7 +23,9 @@
     {
         "id":27,
         "points": 400, "question": "question",
-        "answer": "answer"
+        "answer": "answer",
+        "background_image": 
+        ""
         
         
             },
@@ -27,7 +33,9 @@
     {
         "id":28,
         "points": 400, "question": "question",
-        "answer": "answer"
+        "answer": "answer",
+        "background_image": 
+        ""
         
         
             },
@@ -35,7 +43,9 @@
     {
         "id":29,
         "points": 400, "question": "question",
-        "answer": "answer"
+        "answer": "answer",
+        "background_image": 
+        ""
         
         
             }]

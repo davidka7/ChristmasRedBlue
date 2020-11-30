@@ -63,14 +63,21 @@ function Modals({
         </Card>
       ) : (
         <Card className={`outliners z${points}-size`} bg="transparent">
-          <Card.Title className="fonty">Invalid</Card.Title>
+          <Card.Title className="fonty">{data.answer}</Card.Title>
 
           <small bg="dark" className="text-muted no-wrapper">
             Complete
           </small>
         </Card>
       )}
-      <Modal show={show} onHide={handleClose}>
+      <Modal
+        className="sizer"
+        style={{
+          backgroundImage: `url(${data.background_image})`,
+        }}
+        show={show}
+        onHide={handleClose}
+      >
         <Modal.Header closeButton>
           <Modal.Title>{data.question}</Modal.Title>
         </Modal.Header>

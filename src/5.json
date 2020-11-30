@@ -1,28 +1,36 @@
 [          {
                 "id":30,
                 "points": 500, "question": "question",
-                "answer": "answer"
+                "answer": "answer",
+                "background_image": 
+                ""
                 
                 
                     },
                     {
                         "id":31,
                         "points": 500, "question": "question",
-                        "answer": "answer"
+                        "answer": "answer",
+                        "background_image": 
+                        ""
                         
                         
                             },
                             {
                                 "id":32,
                                 "points": 500, "question": "question",
-                                "answer": "answer"
+                                "answer": "answer",
+                                "background_image": 
+                                ""
                                 
                                 
                                     },
                                     {
                                         "id":33,
                                         "points": 500, "question": "question",
-                                        "answer": "answer"
+                                        "answer": "answer",
+                                        "background_image": 
+                                        ""
                                         
                                         
                                             }]

@@ -3,7 +3,9 @@
     {
 "id":18,
 "points": 300, "question": "question",
-"answer": "answer"
+"answer": "answer",
+"background_image": 
+""
 
 
     },
@@ -11,14 +13,18 @@
     {
         "id":19,
         "points": 300, "question": "question",
-        "answer": "answer"
+        "answer": "answer",
+        "background_image": 
+        ""
         
         
             },
             {
                 "id":20,
                 "points": 300, "question": "question",
-                "answer": "answer"
+                "answer": "answer",
+                "background_image": 
+                ""
                 
                 
                     },
@@ -26,28 +32,36 @@
                     {
                         "id":21,
                         "points": 300, "question": "question",
-                        "answer": "answer"
+                        "answer": "answer",
+                        "background_image": 
+                        ""
                         
                         
                             },
                             {
                                 "id":22,
                                 "points": 300, "question": "question",
-                                "answer": "answer"
+                                "answer": "answer",
+                                "background_image": 
+                                ""
                                 
                                 
                                     },
                                     {
                                         "id":23,
                                         "points": 300, "question": "question",
-                                        "answer": "answer"
+                                        "answer": "answer",
+                                        "background_image": 
+                                        ""
                                         
                                         
                                             },
                                             {
                                                 "id":24,
                                                 "points": 300, "question": "question",
-                                                "answer": "answer"
+                                                "answer": "answer",
+                                                "background_image": 
+                                                ""
                                                 
                                                 
                                                     }
