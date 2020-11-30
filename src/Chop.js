@@ -102,6 +102,7 @@ function Chop({ points }) {
               {data1.map((data) => {
                 return (
                   <Modals
+                    changeTeam={changeTeam}
                     team1={team1}
                     team2={team2}
                     team3={team3}
@@ -117,6 +118,7 @@ function Chop({ points }) {
               {data2.map((data) => {
                 return (
                   <Modals
+                    changeTeam={changeTeam}
                     team1={team1}
                     team2={team2}
                     team3={team3}
@@ -132,6 +134,7 @@ function Chop({ points }) {
               {data3.map((data) => {
                 return (
                   <Modals
+                    changeTeam={changeTeam}
                     team1={team1}
                     team2={team2}
                     team3={team3}
@@ -147,6 +150,7 @@ function Chop({ points }) {
               {data4.map((data) => {
                 return (
                   <Modals
+                    changeTeam={changeTeam}
                     team1={team1}
                     team2={team2}
                     team3={team3}
@@ -162,6 +166,7 @@ function Chop({ points }) {
               {data5.map((data) => {
                 return (
                   <Modals
+                    changeTeam={changeTeam}
                     team1={team1}
                     team2={team2}
                     team3={team3}
@@ -293,13 +298,15 @@ function Chop({ points }) {
               </Card.Body>
             </Card>
           </CardDeck>
-          <Button
-            variant="transparent"
-            className="first-Click outlinerz"
-            onClick={handleTrue}
-          >
-            Continue To The Jeopardy War
-          </Button>
+          <div onClick={changeTeam}>
+            <Button
+              variant="transparent"
+              className="first-Click outlinerz"
+              onClick={handleTrue}
+            >
+              Continue To The Jeopardy War
+            </Button>
+          </div>
         </div>
       )}
     </div>

@@ -8,6 +8,7 @@ import { reducer1, reducer2, reducer3 } from "./actions/dragger";
 import "./Modals.css";
 
 function Modals({
+  changeTeam,
   team1,
   team2,
   team3,
@@ -18,7 +19,7 @@ function Modals({
   reducer3,
 }) {
   const [show, setShow] = useState(false);
-  const [tries] = useState(2);
+  const [tries, setTries] = useState(2);
   const [points] = useState(data.points);
 
   const handleClose = () => setShow(false);
@@ -28,7 +29,11 @@ function Modals({
     setNewValue(e.target.value);
   };
   const handleSubmit = (e) => {
+    setTries(tries - 1);
+    changeTeam();
     if (data.answer === newValue) {
+      setTries(0);
+
       if (TeamPlaying === team1) {
         e.persist();
 
@@ -44,17 +49,27 @@ function Modals({
   };
   return (
     <>
-      <Card
-        className={`outliners z${points}-size`}
-        onClick={handleShow}
-        bg="light"
-      >
-        <Card.Title className="fonty">{data.points}</Card.Title>
+      {tries !== 0 ? (
+        <Card
+          className={`outliners z${points}-size hover1`}
+          onClick={handleShow}
+          bg="light"
+        >
+          <Card.Title className="fonty hover2">{data.points}</Card.Title>
 
-        <small bg="dark" className="text-muted no-wrapper">
-          {tries} Tries
-        </small>
-      </Card>
+          <small bg="dark" className="text-muted no-wrapper hover2">
+            {tries} Tries
+          </small>
+        </Card>
+      ) : (
+        <Card className={`outliners z${points}-size`} bg="transparent">
+          <Card.Title className="fonty">Invalid</Card.Title>
+
+          <small bg="dark" className="text-muted no-wrapper">
+            Complete
+          </small>
+        </Card>
+      )}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>{data.question}</Modal.Title>

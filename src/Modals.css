@@ -1,3 +1,29 @@
+
+.hover1 {
+    display: block;
+   
+    position: relative;
+  
+   
+  }
+  .hover1 .go-corner {
+    opacity: 0.2;
+  }
+  .hover1:hover {
+    border: 1px solid #00838d;
+    box-shadow: 0px 0px 99px 99px rgba(255, 255, 255, 0.5);
+    z-index: 500;
+  }
+  
+  .hover1:hover p {
+    color: #00838d;
+  }
+  .hover1:hover .go-corner {
+    -webkit-transition: opactiy 0.8s linear;
+    transition: opactiy 0.8s linear;
+    opacity: 1;
+  }
+  
 .fonty{
 
 font-size: 1.8vw !important;
