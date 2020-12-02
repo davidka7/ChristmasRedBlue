@@ -91,7 +91,7 @@ max-height:50px
     height: 160px;
     padding: 40px;
     box-shadow: 0 0 0 10px white;
-    outline: dashed 10px #727a80;
+    outline: dashed 10px #012642;
 }
 .lifedanger{
     justify-content: center;
@@ -99,7 +99,7 @@ max-height:50px
     height: 160px;
     padding: 40px;
     box-shadow: 0 0 0 10px white;
-    outline: dashed 10px #960025; 
+    outline: dashed 10px #35000e; 
 }
 
 .lifesuccess{
@@ -109,7 +109,7 @@ max-height:50px
     height: 160px;
     padding: 40px;
     box-shadow: 0 0 0 10px white;
-    outline: dashed 10px #009688;
+    outline: dashed 10px #013d36;
 }
 .lifeinfo{
     justify-content: center;
@@ -117,5 +117,5 @@ max-height:50px
     height: 160px;
     padding: 40px;
     box-shadow: 0 0 0 10px white;
-    outline: dashed 10px #004196; 
+    outline: dashed 10px #021e42; 
 }
