@@ -86,17 +86,17 @@ max-height:50px
 
      
 .lifesecondary{
-   
-    line-height: 30px;
-    
+   justify-content: center;
+    line-height: 20px;
+    height: 160px;
     padding: 40px;
     box-shadow: 0 0 0 10px white;
     outline: dashed 10px #727a80;
 }
 .lifedanger{
-   
-    line-height: 30px;
-    
+    justify-content: center;
+    line-height: 20px;
+    height: 160px;
     padding: 40px;
     box-shadow: 0 0 0 10px white;
     outline: dashed 10px #960025; 
@@ -104,16 +104,17 @@ max-height:50px
 
 .lifesuccess{
     
-    line-height: 30px;
-    
+    justify-content: center;
+    line-height: 20px;
+    height: 160px;
     padding: 40px;
     box-shadow: 0 0 0 10px white;
     outline: dashed 10px #009688;
 }
 .lifeinfo{
-   
-    line-height: 30px;
-    
+    justify-content: center;
+    line-height: 20px;
+    height: 160px;
     padding: 40px;
     box-shadow: 0 0 0 10px white;
     outline: dashed 10px #004196; 

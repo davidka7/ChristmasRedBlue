@@ -50,6 +50,18 @@ justify-content: space-around;
     outline: dashed 10px #009688;
   
 }
+.outliners11{
+  justify-content: center;
+ align-items: center;
+  font-family: Arial;
+  font-size: 18px;
+ color:white !important;
+
+}
+.z1-size{
+  max-height: 50px !important; 
+  max-width:130px !important 
+}
 .z100-size{
     max-height: 90px !important; 
     max-width:130px !important 

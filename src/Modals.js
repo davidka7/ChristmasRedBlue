@@ -51,7 +51,7 @@ function Modals({
     <>
       {tries !== 0 ? (
         <Card
-          className={`outliners z${points}-size hover1`}
+          className={`outliners z100-size hover1`}
           onClick={handleShow}
           bg="light"
         >

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Modals from "./Modals";
+import Modals1 from "./Modals1";
 // import Container from "react-bootstrap/Container";
 // import Row from "react-bootstrap/Row";
 // import Col from "react-bootstrap/Col";
@@ -16,7 +17,7 @@ import data2 from "./2.json";
 import data3 from "./3.json";
 import data4 from "./4.json";
 import data5 from "./5.json";
-
+import category from "./category.json";
 function Chop({ points }) {
   const [trueOrFalse, setTrueOrFalse] = useState(false);
   const [team1, setTeam1] = useState("");
@@ -98,6 +99,12 @@ function Chop({ points }) {
               </Card>
             </CardDeck>
             <br /> <br />
+            <CardDeck className="paddings">
+              {category.map((category) => {
+                return <Modals1 key data={category} />;
+              })}
+            </CardDeck>
+            <br />
             <CardDeck className="paddings">
               {data1.map((data) => {
                 return (
