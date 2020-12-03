@@ -29,15 +29,16 @@
   }
   
 .fonty{
-
+background-color:navy;
 font-size: 1.8vw !important;
-color: rgb(255, 150, 150);
+color: rgb(255, 244, 150);
 
 display: flex;
 justify-content: space-around;
 
 }
 .outliners{
+  background-color:navy !important;
     justify-content: center;
    align-items: center;
     font-family: Arial;
@@ -46,8 +47,8 @@ justify-content: space-around;
     font-weight: bold;
     color: rgb(255, 159, 159);
     padding: 40px;
-    box-shadow: 0 0 0 10px rgb(245, 138, 138);
-    outline: dashed 10px #009688;
+    box-shadow: 0 0 0 10px navy;
+    outline: dashed 10px #014740;
   
 }
 .outliners11{
@@ -56,6 +57,7 @@ justify-content: space-around;
   font-family: Arial;
   font-size: 18px;
  color:white !important;
+ background-color: navy !important;
 
 }
 .z1-size{

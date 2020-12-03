@@ -3,8 +3,11 @@ import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { connect } from "react-redux";
-import { reducer1, reducer2, reducer3 } from "./actions/dragger";
+import { reducer1, reducer2, reducer3, reducer4 } from "./actions/dragger";
+import useSound from "use-sound";
 
+import boopSfx from "./error.wav";
+import yes from "./yes.mp3";
 import "./Modals.css";
 
 function Modals({
@@ -12,12 +15,16 @@ function Modals({
   team1,
   team2,
   team3,
+  team4,
   TeamPlaying,
   data,
   reducer1,
   reducer2,
   reducer3,
+  reducer4,
 }) {
+  const [play] = useSound(boopSfx);
+  const [play1] = useSound(yes);
   const [show, setShow] = useState(false);
   const [tries, setTries] = useState(2);
   const [points] = useState(data.points);
@@ -33,7 +40,7 @@ function Modals({
     changeTeam();
     if (data.answer === newValue) {
       setTries(0);
-
+      play1();
       if (TeamPlaying === team1) {
         e.persist();
 
@@ -44,17 +51,20 @@ function Modals({
       } else if (TeamPlaying === team3) {
         e.persist();
         reducer3(data.points);
+      } else if (TeamPlaying === team4) {
+        e.persist();
+        reducer4(data.points);
+      }
+    } else {
+      {
+        play();
       }
     }
   };
   return (
     <>
       {tries !== 0 ? (
-        <Card
-          className={`outliners z100-size hover1`}
-          onClick={handleShow}
-          bg="light"
-        >
+        <Card className={`outliners z100-size hover1`} onClick={handleShow}>
           <Card.Title className="fonty hover2">{data.points}</Card.Title>
 
           <small bg="dark" className="text-muted no-wrapper hover2">
@@ -101,6 +111,7 @@ const mapDispatchToProps = (dispatch) => {
     reducer1: (points) => reducer1(points, dispatch),
     reducer2: (points) => reducer2(points, dispatch),
     reducer3: (points) => reducer3(points, dispatch),
+    reducer4: (points) => reducer4(points, dispatch),
     // reducer1: (points) => reducer1(points, dispatch),
     // reducer2: (points) => reducer2(points, dispatch),
     // reducer3: (points) => reducer3(points, dispatch),

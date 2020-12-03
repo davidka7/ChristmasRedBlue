@@ -1,8 +1,7 @@
-const TEAM1_STATE = 0;
-
-export const reducer1 = (state = TEAM1_STATE, action) => {
+const TEAM4_STATE = 0;
+export const reducer4 = (state = TEAM4_STATE, action) => {
   switch (action.type) {
-    case "team1":
+    case "team4":
       state = state + action.payload;
       return state;
     case "allTeam":

@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import Modals from "./Modals";
 import Modals1 from "./Modals1";
+import jp from "./jp.mp3";
+import useSound from "use-sound";
+
+// import $ from "jquery";
 // import Container from "react-bootstrap/Container";
 // import Row from "react-bootstrap/Row";
 // import Col from "react-bootstrap/Col";
@@ -9,7 +13,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+// import Scrambler from "scrambling-text";
 import "./Chop.css";
 // import darkImage from "./dark1.jpg";
 import data1 from "./1.json";
@@ -19,22 +23,87 @@ import data4 from "./4.json";
 import data5 from "./5.json";
 import category from "./category.json";
 function Chop({ points }) {
+  const [play2] = useSound(jp);
   const [trueOrFalse, setTrueOrFalse] = useState(false);
   const [team1, setTeam1] = useState("");
-  const [TeamPlaying, setTeamPlaying] = useState("");
+  const [TeamPlaying, setTeamPlaying] = useState(" ");
   const [team2, setTeam2] = useState("");
   const [team3, setTeam3] = useState("");
+  const [team4, setTeam4] = useState("");
   const [team1color, setTeam1color] = useState("light");
   const [team2color, setTeam2color] = useState("light");
   const [team3color, setTeam3color] = useState("light");
+  const [team4color, setTeam4color] = useState("light");
+  // Created for an Articles on:
+  // https://www.html5andbeyond.com/bubbling-text-effect-no-canvas-required/
 
+  // $(document).ready(function ($) {
+  //   // Define a blank array for the effect positions. This will be populated based on width of the title.
+  //   var bArray = [];
+  //   // Define a size array, this will be used to vary bubble sizes
+  //   var sArray = [4, 6, 8, 10];
+
+  //   // Push the header width values to bArray
+  //   for (var i = 0; i < $(".bubbles").width(); i++) {
+  //     bArray.push(i);
+  //   }
+
+  //   // Function to select random array element
+  //   // Used within the setInterval a few times
+  //   function randomValue(arr) {
+  //     return arr[Math.floor(Math.random() * arr.length)];
+  //   }
+
+  //   // setInterval function used to create new bubble every 350 milliseconds
+  //   setInterval(function () {
+  //     // Get a random size, defined as variable so it can be used for both width and height
+  //     var size = randomValue(sArray);
+  //     // New bubble appeneded to div with it's size and left position being set inline
+  //     // Left value is set through getting a random value from bArray
+  //     $(".bubbles").append(
+  //       '<div class="individual-bubble" style="left: ' +
+  //         randomValue(bArray) +
+  //         "px; width: " +
+  //         size +
+  //         "px; height:" +
+  //         size +
+  //         'px;"></div>'
+  //     );
+
+  //     // Animate each bubble to the top (bottom 100%) and reduce opacity as it moves
+  //     // Callback function used to remove finsihed animations from the page
+  //     $(".individual-bubble").animate(
+  //       {
+  //         bottom: "100%",
+  //         opacity: "-=0.7",
+  //       },
+  //       3000,
+  //       function () {
+  //         $(this).remove();
+  //       }
+  //     );
+  //   }, 350);
+  // });
+  // var msg = new SpeechSynthesisUtterance();
+  // const [playNow, setPlayNow] = useState(`Team ${TeamPlaying} Turn`);
+  // const scrambler = new Scrambler();
   const changeTeam = () => {
     if (TeamPlaying == team1) {
       setTeamPlaying(team2);
+      // msg.text = `Team ${team2} Turn`;
+      // window.speechSynthesis.speak(msg);
     } else if (TeamPlaying == team2) {
       setTeamPlaying(team3);
+      // msg.text = `Team ${team3} Turn`;
+      // window.speechSynthesis.speak(msg);
     } else if (TeamPlaying == team3) {
+      setTeamPlaying(team4);
+      // msg.text = `Team ${team4} Turn`;
+      // window.speechSynthesis.speak(msg);
+    } else if (TeamPlaying == team4) {
       setTeamPlaying(team1);
+      // msg.text = `Team ${team1} Turn`;
+      // window.speechSynthesis.speak(msg);
     } else {
       setTeamPlaying(team1);
     }
@@ -53,6 +122,9 @@ function Chop({ points }) {
   const teams3 = (e) => {
     setTeam3(e.target.value);
   };
+  const teams4 = (e) => {
+    setTeam4(e.target.value);
+  };
   const teamcolors1 = (e) => {
     setTeam1color(e.target.value);
   };
@@ -61,6 +133,9 @@ function Chop({ points }) {
   };
   const teamcolors3 = (e) => {
     setTeam3color(e.target.value);
+  };
+  const teamcolors4 = (e) => {
+    setTeam4color(e.target.value);
   };
   return (
     <div className="full-size">
@@ -91,12 +166,21 @@ function Chop({ points }) {
                   Points: {points.reducers3}
                 </Card.Title>
               </Card>
+              <Card bg={team4color} className={`life${team4color}`}>
+                <Card.Title className="second-Click">Team {team4}</Card.Title>
+                <Card.Title className="second-Click">
+                  {" "}
+                  Points: {points.reducers4}
+                </Card.Title>
+              </Card>
             </CardDeck>
             <CardDeck className="paddings">
-              {" "}
               <Card bg="transparent" className="special-font">
-                <div className="special-font1"> Team {TeamPlaying} Turn</div>
+                <span> {`Team ${TeamPlaying} Turn`}</span>
               </Card>
+              <br />
+              <br />
+              <br />
             </CardDeck>
             <br /> <br />
             <CardDeck className="paddings">
@@ -113,6 +197,7 @@ function Chop({ points }) {
                     team1={team1}
                     team2={team2}
                     team3={team3}
+                    team4={team4}
                     TeamPlaying={TeamPlaying}
                     key
                     data={data}
@@ -129,6 +214,7 @@ function Chop({ points }) {
                     team1={team1}
                     team2={team2}
                     team3={team3}
+                    team4={team4}
                     TeamPlaying={TeamPlaying}
                     key
                     data={data}
@@ -145,6 +231,7 @@ function Chop({ points }) {
                     team1={team1}
                     team2={team2}
                     team3={team3}
+                    team4={team4}
                     TeamPlaying={TeamPlaying}
                     key
                     data={data}
@@ -161,6 +248,7 @@ function Chop({ points }) {
                     team1={team1}
                     team2={team2}
                     team3={team3}
+                    team4={team4}
                     TeamPlaying={TeamPlaying}
                     key
                     data={data}
@@ -177,6 +265,7 @@ function Chop({ points }) {
                     team1={team1}
                     team2={team2}
                     team3={team3}
+                    team4={team4}
                     TeamPlaying={TeamPlaying}
                     key
                     data={data}
@@ -188,7 +277,9 @@ function Chop({ points }) {
         </div>
       ) : (
         <div className="first-Click">
-          Name Your Teams
+          {play2()}
+          <div class="bubbles  first-Click">Name Your Teams</div>
+
           <CardDeck className="paddings">
             <Card className="special-corner" bg={team1color}>
               {" "}
@@ -199,7 +290,7 @@ function Chop({ points }) {
                 </div>
                 <div>
                   <label className="second-Click">
-                    Teams Color:{" "}
+                    Teams Color:
                     <Button
                       onClick={teamcolors1}
                       value="secondary"
@@ -304,14 +395,52 @@ function Chop({ points }) {
                 </div>
               </Card.Body>
             </Card>
+            <Card className="special-corner" bg={team4color}>
+              {" "}
+              <Card.Body className="paddings1">
+                <div>
+                  <label className="second-Click">Teams Name:</label>
+                  <input onChange={teams4} className="maxer"></input>
+                </div>
+                <div>
+                  <label className="second-Click">
+                    Teams Color:
+                    <Button
+                      onClick={teamcolors4}
+                      value="secondary"
+                      variant="secondary"
+                    >
+                      {" "}
+                    </Button>
+                    <Button
+                      value="danger"
+                      onClick={teamcolors4}
+                      variant="danger"
+                    >
+                      {" "}
+                    </Button>
+                    <Button
+                      value="success"
+                      onClick={teamcolors4}
+                      variant="success"
+                    >
+                      {" "}
+                    </Button>
+                    <Button value="info" onClick={teamcolors4} variant="info">
+                      {" "}
+                    </Button>
+                  </label>
+                </div>
+              </Card.Body>
+            </Card>
           </CardDeck>
           <div onClick={changeTeam}>
             <Button
               variant="transparent"
-              className="first-Click outlinerz"
+              className="first-Click1 outlinerz"
               onClick={handleTrue}
             >
-              Continue To The Jeopardy War
+              Continue To The Jeopardy
             </Button>
           </div>
         </div>

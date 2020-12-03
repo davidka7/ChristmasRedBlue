@@ -7,7 +7,7 @@ import "./Modals.css";
 function Modals1(props) {
   return (
     <>
-      <Card className={`outliners11 z$1-size`} bg="dark">
+      <Card className={`outliners11 z$1-size`}>
         <Card.Title className="fonty">{props.data.category}</Card.Title>
       </Card>
     </>

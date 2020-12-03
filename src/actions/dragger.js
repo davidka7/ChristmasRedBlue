@@ -18,3 +18,9 @@ export const reducer3 = (points, dispatch) => {
     payload: points,
   });
 };
+export const reducer4 = (points, dispatch) => {
+  dispatch({
+    type: "team4",
+    payload: points,
+  });
+};
