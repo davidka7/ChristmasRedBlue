@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Modals from "./Modals";
 import Modals1 from "./Modals1";
 
-import useSound from "use-sound";
+// import useSound from "use-sound";
 
 // import $ from "jquery";
 // import Container from "react-bootstrap/Container";
@@ -24,76 +24,19 @@ import data5 from "./5.json";
 import category from "./category.json";
 import jp from "./jp.mp3";
 function Chop({ points }) {
-  const [play] = useSound(jp);
+  // const [play] = useSound(jp);
   const [trueOrFalse, setTrueOrFalse] = useState(false);
   const [team1, setTeam1] = useState("");
   const [TeamPlaying, setTeamPlaying] = useState(" ");
   const [team2, setTeam2] = useState("");
   const [team3, setTeam3] = useState("");
   const [team4, setTeam4] = useState("");
-  const [playNumber, setPlayNumber] = useState(0);
+
   const [team1color, setTeam1color] = useState("light");
   const [team2color, setTeam2color] = useState("light");
   const [team3color, setTeam3color] = useState("light");
   const [team4color, setTeam4color] = useState("light");
-  if (playNumber == 0) {
-    console.log("lol");
-    play();
-    setPlayNumber(playNumber + 1);
-  }
-  // Created for an Articles on:
-  // https://www.html5andbeyond.com/bubbling-text-effect-no-canvas-required/
 
-  // $(document).ready(function ($) {
-  //   // Define a blank array for the effect positions. This will be populated based on width of the title.
-  //   var bArray = [];
-  //   // Define a size array, this will be used to vary bubble sizes
-  //   var sArray = [4, 6, 8, 10];
-
-  //   // Push the header width values to bArray
-  //   for (var i = 0; i < $(".bubbles").width(); i++) {
-  //     bArray.push(i);
-  //   }
-
-  //   // Function to select random array element
-  //   // Used within the setInterval a few times
-  //   function randomValue(arr) {
-  //     return arr[Math.floor(Math.random() * arr.length)];
-  //   }
-
-  //   // setInterval function used to create new bubble every 350 milliseconds
-  //   setInterval(function () {
-  //     // Get a random size, defined as variable so it can be used for both width and height
-  //     var size = randomValue(sArray);
-  //     // New bubble appeneded to div with it's size and left position being set inline
-  //     // Left value is set through getting a random value from bArray
-  //     $(".bubbles").append(
-  //       '<div class="individual-bubble" style="left: ' +
-  //         randomValue(bArray) +
-  //         "px; width: " +
-  //         size +
-  //         "px; height:" +
-  //         size +
-  //         'px;"></div>'
-  //     );
-
-  //     // Animate each bubble to the top (bottom 100%) and reduce opacity as it moves
-  //     // Callback function used to remove finsihed animations from the page
-  //     $(".individual-bubble").animate(
-  //       {
-  //         bottom: "100%",
-  //         opacity: "-=0.7",
-  //       },
-  //       3000,
-  //       function () {
-  //         $(this).remove();
-  //       }
-  //     );
-  //   }, 350);
-  // });
-  // var msg = new SpeechSynthesisUtterance();
-  // const [playNow, setPlayNow] = useState(`Team ${TeamPlaying} Turn`);
-  // const scrambler = new Scrambler();
   const changeTeam = () => {
     if (TeamPlaying == team1) {
       setTeamPlaying(team2);
