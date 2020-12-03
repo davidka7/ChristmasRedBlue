@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modals from "./Modals";
 import Modals1 from "./Modals1";
-import jp from "./jp.mp3";
+
 import useSound from "use-sound";
 
 // import $ from "jquery";
@@ -22,18 +22,25 @@ import data3 from "./3.json";
 import data4 from "./4.json";
 import data5 from "./5.json";
 import category from "./category.json";
+import jp from "./jp.mp3";
 function Chop({ points }) {
-  const [play2] = useSound(jp);
+  const [play] = useSound(jp);
   const [trueOrFalse, setTrueOrFalse] = useState(false);
   const [team1, setTeam1] = useState("");
   const [TeamPlaying, setTeamPlaying] = useState(" ");
   const [team2, setTeam2] = useState("");
   const [team3, setTeam3] = useState("");
   const [team4, setTeam4] = useState("");
+  const [playNumber, setPlayNumber] = useState(0);
   const [team1color, setTeam1color] = useState("light");
   const [team2color, setTeam2color] = useState("light");
   const [team3color, setTeam3color] = useState("light");
   const [team4color, setTeam4color] = useState("light");
+  if (playNumber == 0) {
+    console.log("lol");
+    play();
+    setPlayNumber(playNumber + 1);
+  }
   // Created for an Articles on:
   // https://www.html5andbeyond.com/bubbling-text-effect-no-canvas-required/
 
@@ -277,7 +284,6 @@ function Chop({ points }) {
         </div>
       ) : (
         <div className="first-Click">
-          {play2()}
           <div class="bubbles  first-Click">Name Your Teams</div>
 
           <CardDeck className="paddings">
