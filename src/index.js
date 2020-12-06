@@ -6,7 +6,7 @@ import Chop from "./Chop";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import store from "./store";
-var admin = require("firebase-admin");
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
